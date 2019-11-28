@@ -1,0 +1,79 @@
+{
+  "storage" : "model.espresso.weights",
+  "properties" : {
+
+  },
+  "format_version" : 200,
+  "layers" : [
+    {
+      "weights" : {
+
+      },
+      "top" : "concatenate_1_output",
+      "type" : "concat",
+      "name" : "concatenate_1",
+      "bottom" : "eye_left,eye_right,frame"
+    },
+    {
+      "pad_r" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "global_average_pooling2d_1_output__tmp__identity__",
+      "size_x" : 128,
+      "is_global" : 1,
+      "top_shape_style" : 0,
+      "stride_x" : 1,
+      "avg_or_max" : 0,
+      "average_count_exclude_padding" : 1,
+      "type" : "pool",
+      "name" : "global_average_pooling2d_1",
+      "pad_t" : 0,
+      "stride_y" : 1,
+      "bottom" : "concatenate_1_output",
+      "weights" : {
+
+      },
+      "pad_mode" : 2,
+      "size_y" : 128,
+      "pad_value" : 0
+    },
+    {
+      "bottom" : "global_average_pooling2d_1_output__tmp__identity__",
+      "weights" : {
+
+      },
+      "mode" : 6,
+      "top" : "global_average_pooling2d_1_output",
+      "type" : "activation",
+      "name" : "global_average_pooling2d_1__tmp__identity__",
+      "beta" : 0
+    },
+    {
+      "weights" : {
+
+      },
+      "top" : "concatenate_2_output",
+      "type" : "concat",
+      "name" : "concatenate_2",
+      "bottom" : "global_average_pooling2d_1_output,pose"
+    },
+    {
+      "nB" : 8,
+      "top" : "xy",
+      "has_biases" : 1,
+      "weights" : {
+
+      },
+      "nC" : 2,
+      "blob_weights" : 3,
+      "type" : "inner_product",
+      "has_relu" : 0,
+      "bottom" : "concatenate_2_output",
+      "blob_biases" : 1,
+      "has_tanh" : 0,
+      "name" : "dense_1",
+      "has_prelu" : 0
+    }
+  ]
+}

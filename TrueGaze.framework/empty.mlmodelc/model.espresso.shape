@@ -1,0 +1,58 @@
+{
+  "layer_shapes" : {
+    "xy" : {
+      "k" : 2,
+      "w" : 1,
+      "n" : 1,
+      "h" : 1
+    },
+    "concatenate_2_output" : {
+      "k" : 8,
+      "w" : 1,
+      "n" : 1,
+      "h" : 1
+    },
+    "eye_left" : {
+      "k" : 1,
+      "w" : 128,
+      "n" : 1,
+      "h" : 128
+    },
+    "frame" : {
+      "k" : 3,
+      "w" : 128,
+      "n" : 1,
+      "h" : 128
+    },
+    "global_average_pooling2d_1_output" : {
+      "k" : 5,
+      "w" : 1,
+      "n" : 1,
+      "h" : 1
+    },
+    "concatenate_1_output" : {
+      "k" : 5,
+      "w" : 128,
+      "n" : 1,
+      "h" : 128
+    },
+    "pose" : {
+      "k" : 3,
+      "w" : 1,
+      "n" : 1,
+      "h" : 1
+    },
+    "global_average_pooling2d_1_output__tmp__identity__" : {
+      "k" : 5,
+      "w" : 1,
+      "n" : 1,
+      "h" : 1
+    },
+    "eye_right" : {
+      "k" : 1,
+      "w" : 128,
+      "n" : 1,
+      "h" : 128
+    }
+  }
+}

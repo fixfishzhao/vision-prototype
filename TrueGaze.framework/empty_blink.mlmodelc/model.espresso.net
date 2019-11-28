@@ -1,0 +1,80 @@
+{
+  "storage" : "model.espresso.weights",
+  "properties" : {
+
+  },
+  "format_version" : 200,
+  "layers" : [
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "conv2d_1_output",
+      "blob_weights" : 3,
+      "K" : 1,
+      "blob_biases" : 1,
+      "stride_x" : 10,
+      "name" : "conv2d_1",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "stride_y" : 10,
+      "has_biases" : 1,
+      "C" : 64,
+      "bottom" : "eye_right",
+      "weights" : {
+
+      },
+      "Nx" : 1,
+      "pad_mode" : 1,
+      "pad_value" : 0,
+      "Ny" : 1,
+      "n_parallel" : 1
+    },
+    {
+      "pad_r" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "global_max_pooling2d_1_output",
+      "size_x" : 4,
+      "is_global" : 1,
+      "top_shape_style" : 0,
+      "stride_x" : 1,
+      "avg_or_max" : 1,
+      "average_count_exclude_padding" : 1,
+      "type" : "pool",
+      "name" : "global_max_pooling2d_1",
+      "pad_t" : 0,
+      "stride_y" : 1,
+      "bottom" : "conv2d_1_output",
+      "weights" : {
+
+      },
+      "pad_mode" : 2,
+      "size_y" : 4,
+      "pad_value" : 0
+    },
+    {
+      "nB" : 64,
+      "top" : "openness",
+      "has_biases" : 1,
+      "weights" : {
+
+      },
+      "nC" : 1,
+      "blob_weights" : 7,
+      "type" : "inner_product",
+      "has_relu" : 0,
+      "bottom" : "global_max_pooling2d_1_output",
+      "blob_biases" : 5,
+      "has_tanh" : 0,
+      "name" : "dense_1",
+      "has_prelu" : 0
+    }
+  ]
+}

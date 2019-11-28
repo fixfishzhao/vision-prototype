@@ -1,0 +1,28 @@
+{
+  "layer_shapes" : {
+    "conv2d_1_output" : {
+      "k" : 64,
+      "w" : 4,
+      "n" : 1,
+      "h" : 4
+    },
+    "eye_right" : {
+      "k" : 1,
+      "w" : 32,
+      "n" : 1,
+      "h" : 32
+    },
+    "global_max_pooling2d_1_output" : {
+      "k" : 64,
+      "w" : 1,
+      "n" : 1,
+      "h" : 1
+    },
+    "openness" : {
+      "k" : 1,
+      "w" : 1,
+      "n" : 1,
+      "h" : 1
+    }
+  }
+}

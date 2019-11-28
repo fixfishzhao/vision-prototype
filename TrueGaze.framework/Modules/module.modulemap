@@ -1,0 +1,11 @@
+framework module TrueGaze {
+  umbrella header "TrueGaze.h"
+
+  export *
+  module * { export * }
+}
+
+module TrueGaze.Swift {
+    header "TrueGaze-Swift.h"
+    requires objc
+}
