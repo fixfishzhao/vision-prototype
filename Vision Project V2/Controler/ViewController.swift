@@ -16,14 +16,13 @@ class ViewController: UIViewController, WKUIDelegate {
     @IBOutlet weak var readButton: UITextField!
     @IBOutlet weak var calibrationPt: UIImageView!
     @IBOutlet weak var recalibrate: UIImageView!
-
     var webView: WKWebView!
     
     var sessionHandler :SessionHandler?
     // gaze ui view
-    var gazePt : UIView?
+    var gazePt : UIImageView?
     // gaze ui view size
-    var gazeSize : CGSize = CGSize(width: 25, height: 25)
+    var gazeSize : CGSize = CGSize(width: 50, height: 50)
     
     var imageView : UIImageView?
     var titleBox : UITextView?
@@ -151,14 +150,17 @@ extension ViewController : Receiver {
     // called when calibraiton is done. At this time, create a view to indicate gaze coordinate
     func onCalibrationFinished() {
         DispatchQueue.main.async {
-            self.gazePt = UIView(frame: CGRect(x: self.view.frame.width/2 - self.gazeSize.width/2, y: self.view.frame.height/2 - self.gazeSize.height/2, width: self.gazeSize.width, height: self.gazeSize.height))
-            self.gazePt!.layer.cornerRadius = self.gazeSize.width/2
-            self.gazePt!.backgroundColor = UIColor.white
-            self.gazePt!.alpha = 0.3
+            let imageName = "gazepoint.png"
+            let image = UIImage(named: imageName)
+            self.gazePt = UIImageView(image: image!)
+            self.gazePt!.frame = CGRect(x: self.view.frame.width/2 - self.gazeSize.width/2, y: self.view.frame.height/2 - self.gazeSize.height/2, width: self.gazeSize.width, height: self.gazeSize.height)
+//            self.gazePt!.layer.cornerRadius = self.gazeSize.width/2
+//            self.gazePt!.backgroundColor = UIColor.white
+            self.gazePt!.alpha = 0.6
             self.view.addSubview(self.gazePt!)
             
             UIView.animate(withDuration: 1) {
-                self.recalibrate.alpha = 1
+                self.recalibrate.alpha = 0.6
                 self.readButton.alpha = 1
                 self.nextButton.alpha = 1
                 self.titleBox?.alpha = 1

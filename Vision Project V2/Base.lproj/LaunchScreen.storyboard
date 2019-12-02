@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="background-568h" translatesAutoresizingMaskIntoConstraints="NO" id="DJ3-4O-9VT">
-                                <rect key="frame" x="-46" y="0.0" width="506" height="900"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="blank" translatesAutoresizingMaskIntoConstraints="NO" id="cJY-I5-jwg">
+                                <rect key="frame" x="0.0" y="-2" width="414" height="900"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="dot" translatesAutoresizingMaskIntoConstraints="NO" id="PcF-6q-xKb">
@@ -35,7 +35,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="background-568h" width="320" height="568"/>
+        <image name="blank" width="562.5" height="1218"/>
         <image name="dot" width="167" height="167"/>
     </resources>
 </document>

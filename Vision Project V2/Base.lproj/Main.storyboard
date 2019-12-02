@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -15,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="background-568h" translatesAutoresizingMaskIntoConstraints="NO" id="yJl-97-P8y">
-                                <rect key="frame" x="-45" y="0.0" width="504" height="896"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="blank" translatesAutoresizingMaskIntoConstraints="NO" id="bGa-XL-0ui">
+                                <rect key="frame" x="0.0" y="-2" width="414" height="900"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="dot" translatesAutoresizingMaskIntoConstraints="NO" id="coZ-Px-m6N">
@@ -24,22 +25,22 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Read this Article" textAlignment="center" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="WAI-2x-78U">
-                                <rect key="frame" x="30" y="100" width="355" height="50"/>
+                                <rect key="frame" x="30" y="150" width="355" height="50"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Next Article" textAlignment="center" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="n1D-P3-tEe">
-                                <rect key="frame" x="30" y="752" width="355" height="50"/>
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Skip this Article" textAlignment="center" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="n1D-P3-tEe">
+                                <rect key="frame" x="30" y="702" width="355" height="50"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="dot" translatesAutoresizingMaskIntoConstraints="NO" id="zWs-8T-1gT">
-                                <rect key="frame" x="182" y="830" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFit" fixedFrame="YES" image="recalibrate" translatesAutoresizingMaskIntoConstraints="NO" id="Hcz-mZ-frz">
+                                <rect key="frame" x="335" y="812" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -49,7 +50,7 @@
                         <outlet property="calibrationPt" destination="coZ-Px-m6N" id="DMZ-1C-1o0"/>
                         <outlet property="nextButton" destination="n1D-P3-tEe" id="bUh-MK-G3Z"/>
                         <outlet property="readButton" destination="WAI-2x-78U" id="FQx-nZ-dm5"/>
-                        <outlet property="recalibrate" destination="zWs-8T-1gT" id="7N5-GI-Ccw"/>
+                        <outlet property="recalibrate" destination="Hcz-mZ-frz" id="rRC-zp-Klk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -58,7 +59,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="background-568h" width="320" height="568"/>
+        <image name="blank" width="562.5" height="1218"/>
         <image name="dot" width="167" height="167"/>
+        <image name="recalibrate" width="167" height="167"/>
     </resources>
 </document>
